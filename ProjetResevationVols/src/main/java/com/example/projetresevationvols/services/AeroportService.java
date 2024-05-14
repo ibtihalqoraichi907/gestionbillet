@@ -33,7 +33,7 @@ public class AeroportService {
         Aeroport existingAeroport = aeroportRepository.findById(id).orElse(null);
         if (existingAeroport != null) {
             existingAeroport.setNom(updatedAeroport.getNom());
-            // Update other fields as needed
+
             return aeroportRepository.save(existingAeroport);
         }
         return null;

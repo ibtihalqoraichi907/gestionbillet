@@ -1,6 +1,5 @@
 package com.example.projetresevationvols.entities;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -34,6 +33,6 @@ public class Vol {
     private Aeroport arrive;
 
     @ManyToOne
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+
     private Compagnie compagnie;
 }

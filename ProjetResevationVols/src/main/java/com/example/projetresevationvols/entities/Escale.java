@@ -1,8 +1,10 @@
 package com.example.projetresevationvols.entities;
 
-import com.example.projetresevationvols.entities.Vol;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.Date;
 
@@ -19,6 +21,8 @@ public class Escale {
     private Date date;
 
     private String heureDepart;
+    private String heureArrivee;
+    private Date dateDepart;
 
     private Date dateArrivee;
 

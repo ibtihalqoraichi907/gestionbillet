@@ -49,9 +49,9 @@ public class ClientController {
     public ResponseEntity<Client> updateClient(@PathVariable Long id, @RequestBody Client updatedClient) {
         Client existingClient = clientService.getClientById(id);
         if (existingClient != null) {
-            // Update common fields
+
             personneService.updatePersonne(id, updatedClient);
-            // Save the updated client
+
             Client updated = clientService.saveClient(existingClient);
             return new ResponseEntity<>(updated, HttpStatus.OK);
         } else {
